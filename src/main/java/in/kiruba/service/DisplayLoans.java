@@ -8,18 +8,18 @@ import in.kiruba.model.Loans;
 public class DisplayLoans {
 	private static List<Loans>listOfloansLists=new ArrayList<>();
 	static {
-		Loans Loans1=new Loans("House Loan");
-		Loans Loans2=new Loans("Agriculture Loan");
-		Loans Loans3=new Loans("Personal Loan");
-		Loans Loans4=new Loans("Gold Loan");
-		Loans Loans5=new Loans("Education Loan");
-		Loans Loans6=new Loans("vehicle Loan");
-		listOfloansLists.add(Loans1);
-		listOfloansLists.add(Loans2);
-		listOfloansLists.add(Loans3);
-		listOfloansLists.add(Loans4);
-		listOfloansLists.add(Loans5);
-		listOfloansLists.add(Loans6);
+		Loans loans1=new Loans("House Loan");
+		Loans loans2=new Loans("Agriculture Loan");
+		Loans loans3=new Loans("Personal Loan");
+		Loans loans4=new Loans("Gold Loan");
+		Loans loans5=new Loans("Education Loan");
+		Loans loans6=new Loans("vehicle Loan");
+		listOfloansLists.add(loans1);
+		listOfloansLists.add(loans2);
+		listOfloansLists.add(loans3);
+		listOfloansLists.add(loans4);
+		listOfloansLists.add(loans5);
+		listOfloansLists.add(loans6);
 		
 	
 		
