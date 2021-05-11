@@ -6,7 +6,7 @@ import java.util.List;
 import in.kiruba.model.Loans;
 
 public class DisplayLoans {
-	private static List<Loans>listOfloansLists=new ArrayList<Loans>();
+	private static List<Loans>listOfloansLists=new ArrayList<>();
 	static {
 		Loans Loans1=new Loans("House Loan");
 		Loans Loans2=new Loans("Agriculture Loan");

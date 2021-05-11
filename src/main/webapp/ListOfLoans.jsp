@@ -3,7 +3,7 @@
 
 <%@page import="java.util.List"%>
 <%@page import="in.kiruba.service.DisplayLoans" %>
-<html lang="en">
+<html lang = "en">
 <head>
 <meta charset="ISO-8859-1">
 <title>LoanLists</title>
@@ -17,8 +17,8 @@
 		
 			<thead>
 				<tr>
-					<th>S.no</th>
-					<th>Loans</th>
+					<th id="S.no">S.no</th>
+					<th id="loans">Loans</th>
 				</tr>
 			</thead>
 			<tbody>
