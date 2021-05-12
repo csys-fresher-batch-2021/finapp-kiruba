@@ -14,6 +14,7 @@
 	<main class="container-fluid">
 
 		<table class="table table-bordered">
+		<caption>This Table contains loans with serial number</caption>
 		
 			<thead>
 				<tr>
@@ -31,7 +32,7 @@ for(Loans loantypes:typesOfLoans){
 				<tr>
 					<td><%=i %>
 					<td>
-						<%=loantypes.getLoans()%>
+						<%=loantypes.gettype() %>
 					</td>
 				</tr>
 

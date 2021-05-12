@@ -1,35 +1,23 @@
 package in.kiruba.model;
 
 public class Loans {
-	private String loans;
-	
-	
+	private String type;
 
-	public String getLoans() {
-		return loans;
+	public String gettype() {
+		return type;
 	}
 
-
-
-	public void setLoans(String loans) {
-		this.loans = loans;
+	public void settype(String type) {
+		this.type = type;
 	}
 
-
-
-	public Loans(String title) {
-		this.loans = title;
+	public  Loans(String title) {
+		this.type = title;
 	}
-	
-
 
 	@Override
 	public String toString() {
-		return "loantypes [title=" + loans + "]";
+		return "typetypes [title=" + type + "]";
 	}
-
-
-
-	
 
 }
