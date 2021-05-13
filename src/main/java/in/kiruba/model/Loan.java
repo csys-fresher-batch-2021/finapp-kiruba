@@ -1,6 +1,6 @@
 package in.kiruba.model;
 
-public class Loans {
+public class Loan {
 	private String type;
 
 	public String gettype() {
@@ -11,7 +11,7 @@ public class Loans {
 		this.type = type;
 	}
 
-	public  Loans(String title) {
+	public  Loan(String title) {
 		this.type = title;
 	}
 

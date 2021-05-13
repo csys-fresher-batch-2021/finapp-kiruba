@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import in.kiruba.model.Loans;
+import in.kiruba.model.Loan;
 
 
 public class TestDisplay {
@@ -15,7 +15,7 @@ public class TestDisplay {
 	public void testDisplay() {
 		
 			
-			List<Loans> typesOfLoans=DisplayLoans.getLoanTypes();
+			List<Loan> typesOfLoans=DisplayLoans.getLoanTypes();
 			
 			assertEquals(6, typesOfLoans.size());
 		}
