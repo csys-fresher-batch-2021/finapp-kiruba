@@ -11,18 +11,18 @@ public class DisplayLoans {
 	}
 	private static final List<Loan>listOfLoanLists=new ArrayList<>();
 	static {
-		Loan Loan1=new Loan("House Loan");
-		Loan Loan2=new Loan("Agriculture Loan");
-		Loan Loan3=new Loan("Personal Loan");
-		Loan Loan4=new Loan("Gold Loan");
-		Loan Loan5=new Loan("Education Loan");
-		Loan Loan6=new Loan("vehicle Loan");
-		listOfLoanLists.add(Loan1);
-		listOfLoanLists.add(Loan2);
-		listOfLoanLists.add(Loan3);
-		listOfLoanLists.add(Loan4);
-		listOfLoanLists.add(Loan5);
-		listOfLoanLists.add(Loan6);
+		Loan loan1=new Loan("House Loan");
+		Loan loan2=new Loan("Agriculture Loan");
+		Loan loan3=new Loan("Personal Loan");
+		Loan loan4=new Loan("Gold Loan");
+		Loan loan5=new Loan("Education Loan");
+		Loan loan6=new Loan("vehicle Loan");
+		listOfLoanLists.add(loan1);
+		listOfLoanLists.add(loan2);
+		listOfLoanLists.add(loan3);
+		listOfLoanLists.add(loan4);
+		listOfLoanLists.add(loan5);
+		listOfLoanLists.add(loan6);
 		
 	
 		

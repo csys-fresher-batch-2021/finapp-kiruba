@@ -16,9 +16,9 @@ public class UserService {
 	private static final Map<String, ArrayList<User>> userlists = new HashMap<>();
 	private static final ArrayList<User> userlist1 = new ArrayList<>();
 	static {
-		User user1 = new User("kiruba", "kiru15");
+		User user1 = new User("Kiruba", "Kiru@15");
 		userlist1.add(user1);
-		userlists.put("kiruba", userlist1);
+		userlists.put("Kiruba", userlist1);
 	}
 
 	public static Map<String, ArrayList<User>> getUserLists() {
@@ -26,7 +26,8 @@ public class UserService {
 	}
 
 	/**
-	 * this method check key as UserName and password is equals of user password and validate the UserName.
+	 * this method check key as UserName and password is equals of user password and
+	 * validate the UserName.
 	 * 
 	 * 
 	 * @param username
@@ -35,10 +36,11 @@ public class UserService {
 	 */
 	public static boolean login(String username, String password) {
 		boolean isValid = false;
-		if (UserValidation.isValidUserName(username)&&userlists.containsKey(username)) {
-			ArrayList<User> userdetail = new ArrayList<>();
+		if ((UserValidation.isValidUserName(username)) && (userlists.containsKey(username))) {
+			List<User> userdetail = new ArrayList<>();
 			userdetail = userlists.get(username);
 			for (User detail : userdetail) {
+
 				if (detail.getPassWord().equals(password)) {
 					isValid = true;
 

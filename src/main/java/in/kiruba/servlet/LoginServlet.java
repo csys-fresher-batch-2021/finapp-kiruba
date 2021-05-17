@@ -7,8 +7,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import in.kiruba.service.*;
 
 /**
@@ -22,10 +20,10 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		// response.getWriter().append("Served at: ").append(request.getContextPath());
+
 		PrintWriter out = response.getWriter();
 
 		String n = request.getParameter("username");
@@ -33,6 +31,7 @@ public class LoginServlet extends HttpServlet {
 
 		boolean valid = UserService.login(n, p);
 		if (valid) {
+
 			out.println("Successfully login");
 			response.sendRedirect("ListOfLoans.jsp");
 		} else {
