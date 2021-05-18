@@ -51,6 +51,8 @@
 					<version>3.8.0.2131</version>
 				</plugin>
 			</plugins>
+		
 		</pluginManagement>
+		
 	</build>
 </project>

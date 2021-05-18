@@ -37,8 +37,8 @@ public class UserService {
 	public static boolean login(String username, String password) {
 		boolean isValid = false;
 		if ((UserValidation.isValidUserName(username)) && (userlists.containsKey(username))) {
-			List<User> userdetail = new ArrayList<>();
-			userdetail = userlists.get(username);
+			List<User> userdetail =userlists.get(username);
+			
 			for (User detail : userdetail) {
 
 				if (detail.getPassWord().equals(password)) {
@@ -51,9 +51,6 @@ public class UserService {
 		return isValid;
 
 	}
-	public static void main(String[] args) {
-		boolean val=login("val","123");
-		System.out.println(val);
-	}
+	
 
 }
