@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%@page import="in.kiruba.model.Loans"%>
+<%@page import="in.kiruba.model.Loan"%>
 
 <%@page import="java.util.List"%>
 <%@page import="in.kiruba.service.DisplayLoans" %>
@@ -24,9 +24,9 @@
 			</thead>
 			<tbody>
 <% 
-List<Loans> typesOfLoans=DisplayLoans.getLoanTypes();
+List<Loan> typesOfLoans=DisplayLoans.getLoanTypes();
 int i=0;
-for(Loans loantypes:typesOfLoans){
+for(Loan loantypes:typesOfLoans){
 	i++;
 %>
 				<tr>
