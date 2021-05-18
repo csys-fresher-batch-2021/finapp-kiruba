@@ -51,5 +51,9 @@ public class UserService {
 		return isValid;
 
 	}
+	public static void main(String[] args) {
+		boolean val=login("val","123");
+		System.out.println(val);
+	}
 
 }

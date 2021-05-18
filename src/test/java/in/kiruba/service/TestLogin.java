@@ -8,7 +8,7 @@ public class TestLogin {
 
 	@Test
 	public void testLogin() {
-		boolean valid=UserService.login("kiruba", "kiru15");
+		boolean valid=UserService.login("Kiruba", "Kiru@15");
 		assertTrue(valid);
 		
 	}
