@@ -23,5 +23,11 @@ public class TestSetValidation {
 		boolean valid=UserdetailSetValidation.isEmptyString("");
 		assertFalse(valid);
 	}
+	
+	@Test
+	public void testIsEmptyString2() {
+		boolean valid=UserdetailSetValidation.isEmptyString(" jeeva ");
+		assertTrue(valid);
+	}
 
 }
