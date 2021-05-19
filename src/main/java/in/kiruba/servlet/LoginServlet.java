@@ -1,7 +1,6 @@
 package in.kiruba.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,19 +25,15 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		PrintWriter out = response.getWriter();
-
 		String name = request.getParameter("username");
 		String password = request.getParameter("password");
-        HttpSession session = request.getSession();
-		
-		
+		HttpSession session = request.getSession();
+
 		session.setAttribute("LOGGED_IN_USER", name);
 
 		boolean valid = UserService.login(name, password);
 		if (valid) {
 
-			out.println("Successfully login");
 			response.sendRedirect("ListOfLoans.jsp");
 		} else {
 			String message = "Invalid credentials";

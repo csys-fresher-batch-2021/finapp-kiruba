@@ -13,7 +13,7 @@
 		<form action="AddAdminservlet" method="get">
 			<label for="username">Enter the name</label> <input type="text"
 				name="username" placeholder="username" required> <br> <br>
-			<label for="password">Enter the name</label> <input type="text"
+			<label for="password">Enter the name</label> <input type="password"
 				name="password" placeholder="password" required> <br> <br>
 
 			<%
