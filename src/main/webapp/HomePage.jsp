@@ -5,11 +5,12 @@
 <title>Home Page</title>
 </head>
 <body>
-
+<jsp:include page="header.jsp"></jsp:include>
+	<main class="container-fluid">
 
 <h1>Welcome to </h1> 
-<h2> ***ABC <em>Financial Consultant***</em></h2>
+<h2> ***LIVI <em>Financial Consultant***</em></h2>
 
-
+</main>
 </body>
 </html>

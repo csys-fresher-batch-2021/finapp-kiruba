@@ -5,6 +5,8 @@
 <title>Login</title>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
+	<main class="container-fluid">
 
 	<form action="LoginServlet" method="post">
 		<h1>Login Page</h1>
@@ -23,9 +25,11 @@
 		%>
 		<br> <br>
 		<button type="submit" class="btn btn-primary">Submit</button>
+		
+		<a href="AdminLogin.jsp">Admin</a>
 
 
 	</form>
-
+</main>
 </body>
 </html>
