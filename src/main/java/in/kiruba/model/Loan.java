@@ -11,11 +11,10 @@ public class Loan {
 		this.type = type;
 	}
 
-	public  Loan(String title) {
-		this.type = title;
-	}
+	public Loan(String type) {
 
-	
+		this.type = type;
+	}
 
 	@Override
 	public String toString() {
