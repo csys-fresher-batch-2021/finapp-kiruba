@@ -28,7 +28,7 @@
 
 			<button type="submit" class="btn btn-primary">Submit</button>
 			<br>
-			<br> <a href="AddAdmin.jsp">Add Admin</a>
+						
 
 		</form>
 

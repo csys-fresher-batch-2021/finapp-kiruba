@@ -37,6 +37,7 @@ public class AdminLoginServlet extends HttpServlet {
 		
 		session.setAttribute("ROLE", "ADMIN");
 		
+		
 		boolean isValid=AdminLoginService.adminLogin(name, password);
 		if(isValid) {
 			
