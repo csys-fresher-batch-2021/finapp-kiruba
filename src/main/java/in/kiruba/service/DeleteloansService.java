@@ -14,7 +14,7 @@ public class DeleteloansService {
 public static boolean deleteLoans2(Loansdb loans) {
 	
 	try {
-		DeleteloansDao.Deleteloans1(loans);
+		DeleteloansDao.deleteLoan(loans);
 	} catch (ClassNotFoundException | SQLException e) {
 	
 		e.printStackTrace();

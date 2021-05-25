@@ -34,18 +34,23 @@ public class AddLoanServlet extends HttpServlet {
 	 */
     @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String loanName=request.getParameter("loanName");
-		Loansdb inputLoan=new Loansdb(loanName);
-		PrintWriter out=response.getWriter();
-		
-	
-			if(AddloansService.addloans2(inputLoan)) {
-				RequestDispatcher requestDispatcher = request.getRequestDispatcher("Addloans.jsp");
-				requestDispatcher.forward(request,response);
-				
+		try {
+			String loanName=request.getParameter("loanName");
+			Loansdb inputLoan=new Loansdb(loanName);
+			PrintWriter out=response.getWriter();
 			
-				out.println("Added");
-			}
+
+				if(AddloansService.addloans2(inputLoan)) {
+					RequestDispatcher requestDispatcher = request.getRequestDispatcher("Addloans.jsp");
+					requestDispatcher.forward(request,response);
+					
+				
+					out.println("Added");
+				}
+		} catch (IOException | ServletException e) {
+		
+			e.printStackTrace();
+		}
 		
 	}
 

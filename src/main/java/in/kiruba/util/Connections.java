@@ -19,14 +19,14 @@ public class Connections {
 		Class.forName(driverClass);
 		// Step 2: Get the connection
 		Connection connection = DriverManager.getConnection(url, username, password);
-		System.out.println("Connection Created");
+		
 		return connection;
 	}
 	public static void close(Connection con,PreparedStatement pst) {
 		try {
 			if (con != null) {
 				con.close();
-				System.out.println("Connection Released");
+				
 			}
 			if(pst!=null) {
 				pst.close();

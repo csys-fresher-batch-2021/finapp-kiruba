@@ -30,18 +30,23 @@ public class DeleteloanServlet extends HttpServlet {
 	 */
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String loanName=request.getParameter("loanName");
-		Loansdb inputLoan=new Loansdb(loanName);
-		
-		
-	
-			if(DeleteloansService.deleteLoans2(inputLoan)) {
-				RequestDispatcher requestDispatcher = request.getRequestDispatcher("DeleteLoan.jsp");
-				requestDispatcher.forward(request,response);
-				
+		try {
+			String loanName=request.getParameter("loanName");
+			Loansdb inputLoan=new Loansdb(loanName);
 			
+			
+
+				if(DeleteloansService.deleteLoans2(inputLoan)) {
+					RequestDispatcher requestDispatcher = request.getRequestDispatcher("DeleteLoan.jsp");
+					requestDispatcher.forward(request,response);
+					
 				
-			}
+					
+				}
+		} catch (ServletException | IOException e) {
+	
+			e.printStackTrace();
+		}
 	}
 
 	

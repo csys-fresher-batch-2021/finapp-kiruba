@@ -11,21 +11,31 @@ public class DeleteloansDao {
 	private DeleteloansDao() {
 		
 	}
-	public static void Deleteloans1(Loansdb type) throws SQLException, ClassNotFoundException  {
+	public static void deleteLoan(Loansdb type) throws SQLException, ClassNotFoundException  {
+		Connection connection = null;
+		PreparedStatement pst = null;
 		// 1: Get the connection
-		Connection connection = Connections.getConnection();
-		// 2: Query
+		try {
+			 connection = Connections.getConnection();
+			// 2: Query
 
-		String sql = "delete from loan where loan_name =?";// (performance faster)
-		System.out.println(sql);
-		// 3: Execute
-		PreparedStatement pst = connection.prepareStatement(sql);
-		pst.setString(1, type.getLoanNames());
+			String sql = "delete from loan where loan_name =?";// (performance faster)
+			
+			// 3: Execute
+			 pst = connection.prepareStatement(sql);
+			pst.setString(1, type.getLoanNames());
 
-		int rows = pst.executeUpdate();
-		System.out.println("No of rows inserted :" + rows);
-		// 4: Release the connection
-		Connections.close(connection,pst);
+			 pst.executeUpdate();
+			
+			// 4: Release the connection
+			
+		} catch (ClassNotFoundException | SQLException e) {
+		
+			e.printStackTrace();
+		}finally {
+			Connections.close(connection,pst);
+			
+		}
 	}
 
 	
