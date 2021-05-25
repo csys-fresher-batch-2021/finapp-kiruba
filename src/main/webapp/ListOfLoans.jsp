@@ -32,7 +32,7 @@ for(Loan loantypes:typesOfLoans){
 				<tr>
 					<td><%=i %>
 					<td>
-						<%=loantypes.gettype() %>
+						<%=loantypes.getType() %>
 					</td>
 				</tr>
 
