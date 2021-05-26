@@ -39,8 +39,8 @@ public class ListJSON extends HttpServlet {
 		// Step 2: Convert to Json string
 				Gson gson = new Gson();
 				String json = gson.toJson(list);
-				System.out.println("Approach #2: GSON JAR \n" +  json);
-				// Step 3: Write the json in response and flush it
+				System.out.println(" GSON JAR \n" +  json);
+				
 				PrintWriter out = response.getWriter();
 				out.print(json);
 				out.flush();
