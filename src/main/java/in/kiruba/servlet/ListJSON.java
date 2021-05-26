@@ -36,7 +36,7 @@ public class ListJSON extends HttpServlet {
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Loan> list=DisplayLoans.getLoanTypes();
-		// Step 2: Convert to Json string
+		
 				Gson gson = new Gson();
 				String json = gson.toJson(list);
 				System.out.println(" GSON JAR \n" +  json);
