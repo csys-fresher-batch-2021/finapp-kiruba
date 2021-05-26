@@ -14,6 +14,7 @@
 	<h2>List Tasks</h2>
 	<div class="table-responsive">
 	<table class="table table-bordered table-hove">
+	<caption>This Table contains loans with serial number</caption>
 		<thead>
 			<tr>
 				<th id="s.no">S.no</th>
