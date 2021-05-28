@@ -1,33 +1,28 @@
 package in.kiruba.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.google.gson.Gson;
-
-import in.kiruba.model.Loan;
-import in.kiruba.service.DisplayLoans;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class ListJSON
+ * Servlet implementation class LogoutServlet
  */
-@WebServlet("/ListJSON")
-public class ListJSON extends HttpServlet {
+@WebServlet("/LogoutServlet")
+public class LogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ListJSON() {
+    public LogoutServlet() {
         super();
-  
+        
     }
 
 	/**
@@ -36,19 +31,19 @@ public class ListJSON extends HttpServlet {
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			List<Loan> list=DisplayLoans.getLoanTypes();
+			HttpSession session = request.getSession();
 			
-					Gson gson = new Gson();
-					String json = gson.toJson(list);
-					
-					
-					PrintWriter out = response.getWriter();
-					out.print(json);
-					out.flush();
-		} catch (IOException e) {
+			session.invalidate();
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("Login.jsp");
+			requestDispatcher.forward(request,response);
+		} catch (ServletException | IOException e) {
 	
 			e.printStackTrace();
 		}
+		
+		
+
+		
 	}
 
 	

@@ -2,7 +2,6 @@ package in.kiruba.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,24 +9,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.gson.Gson;
-
-import in.kiruba.model.Loan;
-import in.kiruba.service.DisplayLoans;
+import in.kiruba.service.AdminLoginService;
 
 /**
- * Servlet implementation class ListJSON
+ * Servlet implementation class AddAdminservlet
  */
-@WebServlet("/ListJSON")
-public class ListJSON extends HttpServlet {
+@WebServlet("/AddAdminservlet")
+public class AddAdminservlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ListJSON() {
+    public AddAdminservlet() {
         super();
-  
+        
     }
 
 	/**
@@ -35,16 +31,23 @@ public class ListJSON extends HttpServlet {
 	 */
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		try {
-			List<Loan> list=DisplayLoans.getLoanTypes();
-			
-					Gson gson = new Gson();
-					String json = gson.toJson(list);
-					
-					
-					PrintWriter out = response.getWriter();
-					out.print(json);
-					out.flush();
+			PrintWriter out=response.getWriter();
+			String name=request.getParameter("username");
+			String password=request.getParameter("password");
+			boolean valid=AdminLoginService.addAdmin(name, password);
+			if(valid) {
+				
+				out.println("Successfully added");
+				
+			}else {
+				String message = "Already Exists";
+				response.sendRedirect("AddAdmin.jsp?errormessage=" + message);
+				
+				
+				
+			}
 		} catch (IOException e) {
 	
 			e.printStackTrace();

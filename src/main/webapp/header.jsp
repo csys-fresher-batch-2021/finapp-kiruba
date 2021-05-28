@@ -30,6 +30,10 @@
       <li class="nav-item active">
         <a class="nav-link" href="Login.jsp">Login</a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="Register.jsp">Register</a>
+      </li>
+      
     
       <%}else{ %>
       <li class="nav-item active">
